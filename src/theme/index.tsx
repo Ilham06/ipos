@@ -20,6 +20,9 @@ function Theme({ children }: Props) {
         main: "#64748B",
         contrastText: "#fff",
       },
+      netral: {
+         darken: "#2A1D1F",
+       },
     },
     typography: {
       fontFamily: 'Poppins',
@@ -36,6 +39,23 @@ function Theme({ children }: Props) {
       //     LinkComponent: LinkBehavior,
       //   },
       // },
+      MuiButton: {
+         variants: [
+            {
+               props: { variant: "contained" },
+               style: {
+                 color: "#FFF",
+                 borderRadius: '10px',
+                 backgroundColor: "#701664",
+                 boxShadow: "none",
+                 "&:hover": {
+                   backgroundColor: "#701664",
+                   boxShadow: "none"
+                 },
+               },
+             },
+         ]
+      }
     },
   });
   return (
