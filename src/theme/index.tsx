@@ -56,6 +56,40 @@ function Theme({ children }: Props) {
              },
          ]
       },
+      MuiTable: {
+        styleOverrides: {
+          // Name of the slot
+          root: {
+            // Some CSS
+            // backgroundColor: "#FFEFDB",
+            boxShadow: 'none',
+            borderRadius: '10px',
+          },
+        },
+      },
+      // MuiPaper: {
+      //   styleOverrides: {
+      //     root: {
+      //       boxShadow: 'none', // New boxShadow value
+      //     },
+      //   },
+      // }
+      // MuiTableHead: {
+      //   styleOverrides: {
+      //     // Name of the slot
+      //     root: {
+      //       // Some CSS
+      //       backgroundColor: "#FFEFDB",
+      //     },
+      //   },
+      // },
+      // MuiTableBody: {
+      //   styleOverrides: {
+      //     root: {
+      //       backgroundColor: "#F4F5FA"
+      //     }
+      //   }
+      // },
     },
   });
   return (

@@ -8,8 +8,8 @@ import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 type IProps = {
   onKeyPress: (event: any) => void;
-  size: any;
-  width: string;
+  size?: any;
+  width?: string;
   placeholder?: string;
 };
 

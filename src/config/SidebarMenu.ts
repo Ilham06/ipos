@@ -14,7 +14,7 @@ export const sidebarMenuList = [
    {
       label: "Product",
       Icon: FastfoodOutlined,
-      to: "/data-personel-polri",
+      to: "/product",
    },
    {
       label: "Product Category",
