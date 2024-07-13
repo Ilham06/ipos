@@ -9,7 +9,7 @@ export const sidebarMenuList = [
    {
       label: "Point Of Sales",
       Icon: ShoppingCartOutlined,
-      to: "/data-personil",
+      to: "/pos",
    },
    {
       label: "Product",

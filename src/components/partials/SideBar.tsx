@@ -11,6 +11,7 @@ import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
 import { sidebarMenuList } from "@/config/SidebarMenu";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SideBar() {
   return (
@@ -33,15 +34,17 @@ export default function SideBar() {
       </Box>
       <List>
         {sidebarMenuList.map((text, index) => (
-          <ListItem key={index} disablePadding sx={{ mb: 1 }}>
-            <ListItemButton>
-              <text.Icon sx={{ mr: 1.5, color: "netral.darken" }} />
-              <ListItemText
-                primary={text.label}
-                sx={{ color: "netral.darken" }}
-              />
-            </ListItemButton>
-          </ListItem>
+          <Link href={text.to} style={{textDecoration: 'none'}}>
+            <ListItem key={index} disablePadding sx={{ mb: 1 }}>
+              <ListItemButton>
+                <text.Icon sx={{ mr: 1.5, color: "netral.darken" }} />
+                <ListItemText
+                  primary={text.label}
+                  sx={{ color: "netral.darken" }}
+                />
+              </ListItemButton>
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>

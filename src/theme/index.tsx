@@ -55,7 +55,7 @@ function Theme({ children }: Props) {
                },
              },
          ]
-      }
+      },
     },
   });
   return (
