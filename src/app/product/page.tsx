@@ -23,6 +23,7 @@ import Image from "next/image";
 import PageHeader from "@/components/PageHeader";
 import { Add, EditOutlined, DeleteOutline } from "@mui/icons-material";
 import SearchBox from "@/components/forms/SearchBox";
+import Link from "next/link";
 
 const headers = ["No", "Product", "Category", "Price", "Action"];
 
@@ -85,9 +86,11 @@ export default function Page() {
         </Box>
 
         <Box>
-          <Button variant="contained" size="large" startIcon={<Add />}>
-            Add Product
-          </Button>
+          <Link href={"/product/create"}>
+            <Button variant="contained" size="large" startIcon={<Add />}>
+              Add Product
+            </Button>
+          </Link>
         </Box>
       </Box>
       <TableContainer component={Box} sx={{ mt: 4 }}>
@@ -133,19 +136,26 @@ export default function Page() {
                 </TableCell>
                 <TableCell sx={{ fontWeight: 500 }}>{product.price}</TableCell>
                 <TableCell width={"12%"}>
-                  <Button startIcon={<EditOutlined/>} color="success">Edit</Button>
-                  <Button startIcon={<DeleteOutline/>} color="error">Delete</Button>
+                  <Button startIcon={<EditOutlined />} color="success">
+                    Edit
+                  </Button>
+                  <Button startIcon={<DeleteOutline />} color="error">
+                    Delete
+                  </Button>
                 </TableCell>
               </TableRow>
             ))}
           </TableBody>
         </Table>
       </TableContainer>
-      <Box display={'flex'} justifyContent={'end'} mt={5}>
+      <Box display={"flex"} justifyContent={"end"} mt={5}>
         <Stack spacing={2}>
-          
-          <Pagination size="large" count={10} variant="outlined" color="primary" />
-         
+          <Pagination
+            size="large"
+            count={10}
+            variant="outlined"
+            color="primary"
+          />
         </Stack>
       </Box>
     </Box>
