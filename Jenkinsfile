@@ -8,26 +8,37 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-               bat 'npm install'
+                sh 'npm install'
             }
-         }
+        }
         stage('Build the app') {
             steps {
-                echo 'Building...'
-                bat 'npm run build'  // Sesuaikan dengan build tool-mu
+                sh 'npm run build'
             }
         }
         stage('Start the app') {
             steps {
-                echo 'Running...'
-                bat 'npm run start'  // Sesuaikan jika menggunakan testing
+                sh 'npm run start'
             }
         }
-      //   stage('Deploy') {
-      //       steps {
-      //           echo 'Deploying...'
-      //           sh './deploy.sh'  // Jika ada script deployment
-      //       }
-      //   }
+        // Optional test & deploy
+        // stage('Test') {
+        //     steps {
+        //         sh 'npm test'
+        //     }
+        // }
+        // stage('Deploy') {
+        //     steps {
+        //         sh './deploy.sh'
+        //     }
+        // }
+    }
+    post {
+        success {
+            echo 'Pipeline completed successfully! ✨'
+        }
+        failure {
+            echo 'Something went wrong... (´；ω；｀)'
+        }
     }
 }
