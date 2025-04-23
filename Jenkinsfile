@@ -18,9 +18,11 @@ pipeline {
         }
         stage('Start the app') {
             steps {
-                sh 'npm run start'
+                echo 'Starting in background...'
+                sh 'nohup npm run start &'
             }
-        }
+}
+
         // Optional test & deploy
         // stage('Test') {
         //     steps {
