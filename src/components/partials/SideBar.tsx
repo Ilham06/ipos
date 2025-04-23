@@ -34,7 +34,7 @@ export default function SideBar() {
       </Box>
       <List>
         {sidebarMenuList.map((text, index) => (
-          <Link href={text.to} style={{textDecoration: 'none'}}>
+          <Link key={index} href={text.to} style={{textDecoration: 'none'}}>
             <ListItem key={index} disablePadding sx={{ mb: 1 }}>
               <ListItemButton>
                 <text.Icon sx={{ mr: 1.5, color: "netral.darken" }} />

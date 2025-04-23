@@ -30,7 +30,9 @@ export default function Page() {
             <Box my={4}>
               {categories.map((category, index) => {
                 return (
+                  
                   <Button
+                  key={index}
                     size="large"
                     variant={index == 0 ? "contained" : "outlined"}
                     sx={{
@@ -50,7 +52,7 @@ export default function Page() {
             <Grid container spacing={3}>
               {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((product, index) => {
                 return (
-                  <Grid item lg={3}>
+                  <Grid item lg={3} key={index}>
                     <ProductCard />
                   </Grid>
                 );
@@ -77,7 +79,7 @@ export default function Page() {
             <Box my={5} px={4}>
               {[1, 2, 3].map((cart, index) => {
                 return (
-                  <Box mb={2}>
+                  <Box mb={2} key={index}>
                     <CartItemCard />
                   </Box>
                 );

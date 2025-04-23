@@ -99,7 +99,7 @@ export default function Page() {
             <TableRow>
               {headers.map((header, index) => {
                 return (
-                  <TableCell sx={{ fontWeight: 600, color: "#898989" }}>
+                  <TableCell sx={{ fontWeight: 600, color: "#898989" }} key={index}>
                     {header}
                   </TableCell>
                 );

@@ -33,7 +33,7 @@ export default function ChooseDiscountDialog(props: IProps) {
         <DialogContent>
           {[1, 2, 3].map((discount, index) => {
             return (
-              <Box mb={2}>
+              <Box mb={2} key={index}>
                 <DiscountCard />
               </Box>
             );
