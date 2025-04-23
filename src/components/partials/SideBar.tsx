@@ -37,10 +37,10 @@ export default function SideBar() {
           <Link key={index} href={text.to} style={{textDecoration: 'none'}}>
             <ListItem key={index} disablePadding sx={{ mb: 1 }}>
               <ListItemButton>
-                <text.Icon sx={{ mr: 1.5, color: "netral.darken" }} />
+                <text.Icon sx={{ mr: 1.5, color: "#2A1D1F" }} />
                 <ListItemText
                   primary={text.label}
-                  sx={{ color: "netral.darken" }}
+                  sx={{ color: "#2A1D1F" }}
                 />
               </ListItemButton>
             </ListItem>

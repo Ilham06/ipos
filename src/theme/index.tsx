@@ -20,9 +20,6 @@ function Theme({ children }: Props) {
         main: "#64748B",
         contrastText: "#fff",
       },
-      netral: {
-         darken: "#2A1D1F",
-       },
     },
     typography: {
       fontFamily: 'Poppins',

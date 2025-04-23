@@ -40,7 +40,7 @@ export default function Page() {
                       fontWeight: 600,
                       textTransform: "capitalize",
                       borderRadius: "6px",
-                      color: index != 0 && 'netral.darken',
+                      color: index != 0 && '#2A1D1F',
                       borderColor: index != 0 && '#D9D9D9'
                     }}
                   >
