@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'github-credentials', url: 'https://github.com/Ilham06/ipos'
+                git branch: 'master', url: 'https://github.com/Ilham06/ipos'
             }
         }
         stage('Install Dependencies') {
