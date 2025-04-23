@@ -20,7 +20,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Step 8: Salin build hasil build sebelumnya ke folder yang digunakan oleh Nginx
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/.next /usr/share/nginx/html
 
 # Step 9: Expose port yang digunakan oleh Nginx
 EXPOSE 80
