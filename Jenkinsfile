@@ -44,7 +44,7 @@ pipeline {
 
                         # SSH ke VPS dan jalankan perintah deploy
                         ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
-                            cd /path/to/your/project
+                            cd /root/projects/ipos-fe/ipos
 
                             # Pull Docker image terbaru
                             docker pull ${IMAGE_NAME}:${IMAGE_TAG}
