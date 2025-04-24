@@ -45,10 +45,10 @@ pipeline {
                         # SSH ke VPS dan jalankan perintah deploy
                         ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << 'EOF'
                             cd /root/projects/ipos-fe/ipos
-                            docker pull ilhammuhamad/ipos-fe:latest
+                            docker pull ${IMAGE_NAME}:${IMAGE_TAG}
                             docker-compose down || true
                             docker-compose up -d
-                            EOF
+EOF
                     '''
                 }
             }
