@@ -43,16 +43,12 @@ pipeline {
                         chmod 600 ~/.ssh/id_rsa
 
                         # SSH ke VPS dan jalankan perintah deploy
-                        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << EOF
+                        ssh -o StrictHostKeyChecking=no $VPS_USER@$VPS_HOST << 'EOF'
                             cd /root/projects/ipos-fe/ipos
-
-                            # Pull Docker image terbaru
-                            docker pull ${IMAGE_NAME}:${IMAGE_TAG}
-
-                            # Restart container
-                            docker-compose down
+                            docker pull ilhammuhamad/ipos-fe:latest
+                            docker-compose down || true
                             docker-compose up -d
-                        EOF
+                            EOF
                     '''
                 }
             }
