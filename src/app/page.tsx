@@ -4,6 +4,6 @@ import { Button } from "@mui/material";
 
 export default function Home() {
   return (
-    <>Hello ini buat test perubahan saja ya</>
+    <>Hello ini buat test perubahan saja ya kedua</>
   );
 }
