@@ -1,8 +1,9 @@
-version: '3.8'
+version: "3.8"
 
 services:
   ipos-fe:
-    image: ipos:${APP_VERSION}
+    build: .
+    container_name: ipos-fe
     ports:
       - "3002:3000"
     restart: always
