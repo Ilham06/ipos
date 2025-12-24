@@ -1,28 +1,20 @@
 pipeline {
   agent any
 
-  environment {
-    APP_DIR = "/srv/money-tracking"
-  }
-
   stages {
     stage('Checkout') {
       steps {
-        dir(APP_DIR) {
-          checkout scm
-        }
+        checkout scm
       }
     }
 
     stage('Build & Deploy') {
       steps {
-        dir(APP_DIR) {
-          sh '''
-          docker compose down
+        sh '''
+          docker compose down || true
           docker compose build
           docker compose up -d
-          '''
-        }
+        '''
       }
     }
   }
